@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create User</title>
+        <link rel="stylesheet" href="/static/styles.css"> <!-- Подключение CSS -->
+    </head>
+    <body>
+        <header>
+            <h1>Create a New User</h1>
+        </header>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/api/users">API Users</a>
+        </nav>
+
+        <div class="container">
+            <h2>Create New User</h2>
+            <form action="/create-user" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+
+                <label for="subscribe">Subscribe to newsletter:</label>
+                <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+
+                <button type="submit">Create User</button>
+            </form>
+            <a href="/users">View all users</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 FastAPI Application</p>
+        </footer>
+    </body>
+</html>
